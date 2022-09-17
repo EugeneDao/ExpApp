@@ -1,0 +1,48 @@
+.expense-item{
+    box-sizing: border-box;
+    width: 739px;
+    height: 134px;
+    border-radius: 12px;
+    background: #575757;
+}
+
+.date{
+    width: 114px;
+    height: 114px;
+    border-radius: 12px;
+    border: 1px solid #FFFFFF;
+    padding: 10px;
+    background: #1A1A1A;
+    color: #FFFFFF;
+
+    font-family: 'Roboto';
+    font-size: 14px;
+
+}
+
+.day{
+    font-size: 24px;
+}
+
+.title{
+    width: 517px;
+    height: 42px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #FFFFFF;
+}
+
+.amount{
+    box-sizing: border-box;
+    width: 68px;
+    height: 48px;
+
+    background: #862796;
+    border: 1px solid #FFFFFF;
+    border-radius: 12px;
+}
