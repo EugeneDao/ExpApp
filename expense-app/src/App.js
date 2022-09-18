@@ -1,9 +1,12 @@
-import './App.css';
-import ExpenseApp from './Components/ExpenseApp';
-
+import "./App.css";
+import ExpenseApp from "./Components/ExpenseApp";
+import AddNewExpense from "./AddNewExpense";
 function App() {
   return (
-    <ExpenseApp />
+    <div>
+      <AddNewExpense />
+      {/* <ExpenseApp /> */}
+    </div>
   );
 }
 
