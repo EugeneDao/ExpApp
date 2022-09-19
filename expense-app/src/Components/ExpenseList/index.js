@@ -17,7 +17,7 @@ function ExpenseList(){
 
     return (
         <div className="expense-list">
-            <GraphChart />
+            <GraphChart/>
             
             {expenses.map(
              (item, index)=>

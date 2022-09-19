@@ -1,7 +1,7 @@
 import "./style.css";
 import React, { useState } from "react";
 const Add = (props) => {
-  const [dataexpense, setDataexpense] = useState([
+  const [dataExpense, setDataExpense] = useState([
     // { name: "ao", amount: 50, day: 17, month: 10, year: 2022 },
   ]);
   const [check, setCheck] = useState(false);
@@ -29,12 +29,12 @@ const Add = (props) => {
         month: thang,
         year: nam,
       };
-      setDataexpense([...dataexpense, newItem]);
+      setDataExpense([...dataExpense, newItem]);
       setName("");
       setAmount("");
       setDate("");
     }
-    console.log(dataexpense);
+    console.log(dataExpense);
   };
 
   const ChangeName = (e) => {
