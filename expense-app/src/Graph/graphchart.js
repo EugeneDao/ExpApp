@@ -1,13 +1,23 @@
 import React from 'react';
 import GraphItem from './graphitems';
-function GraphChart() {
-    return ({
-        // return array of items
-         totalExpenseMonthly = Object.values( expenseData.reduce((totalValue,o)=>{
+import Add from '../AddNewExpense';
+function GraphChart(){
+
+        const totalExpenseMonthly = Object.values( dataexpense.reduce((totalValue,o)=>{
             totalValue[o.month]=totalValue[o.month] || {value:0, month:o.month}
             totalValue[o.month].value += o.value;
-            return totalValue;
-        },{}))}
-    )
-};
+            return totalExpenseMonthly;
+
+        },{}))
+        return (
+            
+            totalExpenseMonthly.map((item) => {
+              return (
+                <GraphItem
+                percentage={item.value}
+                />
+              );
+            }))
+        }
+
 export default GraphChart;

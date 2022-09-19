@@ -1,5 +1,5 @@
 import React from 'react';
-function GraphItem() {
+function GraphItem(props) {
     
     return (
         <div classname="graph">
@@ -9,7 +9,7 @@ function GraphItem() {
             borderRadius: '50%',
         }}>
             <div style ={{backgroundColor: "#3D15A9",
-                        height: `${ this.state.percentage }%`,
+                        height: `${props.percentage}%`,
                         width: '21px',
                         borderRadius: '50%',
                         margins: 0,
