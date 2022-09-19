@@ -1,9 +1,6 @@
 import "./style.css";
 import React, { useState } from "react";
 const Add = (props) => {
-  const [dataExpense, setDataExpense] = useState([
-    // { name: "ao", amount: 50, day: 17, month: 10, year: 2022 },
-  ]);
   const [check, setCheck] = useState(false);
   const [name, setName] = useState("");
   const [amount, setAmount] = useState("");
@@ -14,7 +11,7 @@ const Add = (props) => {
   const close = () => {
     setCheck(false);
   };
-  const AddExpense = () => {
+  const addExpense = () => {
     if (name && date && amount) {
       let ngay, thang, nam;
       let tmp = date;
@@ -29,15 +26,16 @@ const Add = (props) => {
         month: thang,
         year: nam,
       };
-      setDataExpense([...dataExpense, newItem]);
+
+      props.handleAddExpense(newItem);
+
       setName("");
       setAmount("");
       setDate("");
     }
-    console.log(dataExpense);
   };
 
-  const ChangeName = (e) => {
+  const changeName = (e) => {
     setName(e.target.value);
   };
 
@@ -63,7 +61,7 @@ const Add = (props) => {
             <input
               type="text"
               placeholder="hello"
-              onChange={ChangeName}
+              onChange={changeName}
               value={name}
             ></input>
           </div>
@@ -97,7 +95,7 @@ const Add = (props) => {
         </div>
 
         <div className="container-third">
-          <button style={{ background: "#862796" }} onClick={AddExpense}>
+          <button style={{ background: "#862796" }} onClick={addExpense}>
             ADD
           </button>
           <button onClick={close}>CANCEL</button>
