@@ -45,7 +45,6 @@ const Add = (props) => {
 
   const ChangeDate = (e) => {
     setDate(e.target.value);
-    // console.log(e.target.value);
   };
 
   if (check) {

@@ -18,7 +18,6 @@ function ExpenseApp(props) {
     setCheck(false);
   };
   const addExpense = (item) => {
-    console.log(item);
     setDataExpense([...dataExpense, item]);
   };
 
@@ -32,7 +31,6 @@ function ExpenseApp(props) {
 
   const changeDate = (e) => {
     setDate(e.target.value);
-    // console.log(e.target.value);
   };
   return (
     <div>
