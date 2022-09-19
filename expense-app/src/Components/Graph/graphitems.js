@@ -10,14 +10,16 @@ function GraphItem(props) {
           height: "178px",
           width: "20px",
           borderRadius: "10px",
+          display:"flex",
+          flexDirection:"column", 
+          flex:1,
         }}
       >
         <div
           style={{
-            display: "flex",
-            alignSelf: "flex-end",
+            marginTop: "auto",
             backgroundColor: "#3D15A9",
-            height: `50px`,
+            height: `${props.amount/5000*187}`,
             width: "20px",       
             borderRadius: "10px",
             margins: 0,
@@ -25,6 +27,7 @@ function GraphItem(props) {
         ></div>
       </div>
     </div>
+    <div className = "month-name"></div>
   );
 }
 export default GraphItem;
