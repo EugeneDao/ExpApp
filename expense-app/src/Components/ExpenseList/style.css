@@ -1,0 +1,15 @@
+.expense-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 20px;
+
+    position: absolute;
+    width: 799px;
+    height: 853px;
+    left: 582px;
+    top: 179px;
+
+    background: #1A1A1A;
+}

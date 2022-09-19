@@ -2,6 +2,7 @@ import React, {useState} from "react";
 
 import "./style.css";
 import ExpenseItem from "../ExpenseItem";
+import GraphChart from "../Graph/graphchart";
 
 function ExpenseList(){
     const [expenses,setExpenses] = useState ([
@@ -16,8 +17,7 @@ function ExpenseList(){
 
     return (
         <div className="expense-list">
-            {/* filter-theo-year-neu-co-:D */}
-            {/* chen-graph-dzo-day-ne */}
+            <GraphChart />
             
             {expenses.map(
              (item, index)=>
