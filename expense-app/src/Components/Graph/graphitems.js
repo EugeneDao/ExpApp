@@ -19,15 +19,15 @@ function GraphItem(props) {
           style={{
             marginTop: "auto",
             backgroundColor: "#3D15A9",
-            height: `${props.amount/5000*187}`,
+            height: `${props.amount/5000*178}px`,
             width: "20px",       
             borderRadius: "10px",
             margins: 0,
           }}
         ></div>
       </div>
+      <div className = "month-name">{props.month}</div>
     </div>
-    <div className = "month-name"></div>
   );
 }
 export default GraphItem;

@@ -34,7 +34,7 @@ function GraphChart(props) {
   return (
     <div className="graph-container">
       {totalExpenseMonthly.map((item, index) => {
-        return <GraphItem key={index} amount={item.amount} />;
+        return <GraphItem key={index} amount={item.amount} month={item.month} />;
       })}
     </div>
   );
