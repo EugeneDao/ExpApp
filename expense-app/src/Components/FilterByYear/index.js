@@ -1,0 +1,57 @@
+import "./style.css";
+import React, { useState } from "react";
+import ExpenseItem from "../ExpenseItem";
+const FilterYear = (props) => {
+  const [change, setChange] = useState("");
+  const filterExpense = (filterYear) => {
+    const updatedExpense = props.dataExpense.filter((item) => {
+      return item.year.toString(10) === filterYear;
+    });
+    console.log(props.dataExpense);
+    console.log(updatedExpense);
+    // props.setData(updatedExpense);
+
+    updatedExpense.map((item, index) => {
+      return (
+        <ExpenseItem
+          key={index}
+          year={item.year}
+          month={item.month}
+          day={item.day}
+          name={item.name}
+          amount={item.amount}
+        />
+      );
+    });
+  };
+
+  const handleChange = (e) => {
+    if (e.target.value === "All") {
+    } else {
+      setChange(e.target.value);
+      console.log(change);
+      filterExpense(change);
+    }
+  };
+  return (
+    <div className="boss">
+      <div style={{ color: "#ffffff", fontWeight: "bold" }}>Filter by year</div>
+      <select
+        style={{
+          borderRadius: "4px",
+          padding: "10px",
+          fontWeight: "bold",
+          border: "none",
+        }}
+        onChange={handleChange}
+      >
+        <option style={{ fontWeight: "bold" }}>All</option>
+        <option style={{ fontWeight: "bold" }}>2021</option>
+        <option style={{ fontWeight: "bold" }}>2022</option>
+        <option style={{ fontWeight: "bold" }}>2023</option>
+        <option style={{ fontWeight: "bold" }}>2024</option>
+      </select>
+    </div>
+  );
+};
+export default FilterYear;

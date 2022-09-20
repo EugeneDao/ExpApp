@@ -9,6 +9,9 @@ const Add = (props) => {
     setCheck(true);
   };
   const close = () => {
+    setName("");
+    setAmount("");
+    setDate("");
     setCheck(false);
   };
   const addExpense = () => {
@@ -91,14 +94,21 @@ const Add = (props) => {
               value={date}
             ></input>
           </div>
+          <button
+            style={{ background: "#862796", marginLeft: "500px" }}
+            onClick={addExpense}
+          >
+            ADD
+          </button>
+          <button onClick={close}>CANCEL</button>
         </div>
-
+        {/* 
         <div className="container-third">
           <button style={{ background: "#862796" }} onClick={addExpense}>
             ADD
           </button>
           <button onClick={close}>CANCEL</button>
-        </div>
+        </div> */}
       </div>
     );
   }
