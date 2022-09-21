@@ -21,20 +21,9 @@ function ExpenseApp(props) {
   const addExpense = (item) => {
     setDataExpense([...dataExpense, item]);
   };
-  // const setData = (tmp) => {
-  //   tmp.map((item, index) => {
-  //     return (
-  //       <ExpenseItem
-  //         key={index}
-  //         year={item.year}
-  //         month={item.month}
-  //         day={item.day}
-  //         name={item.name}
-  //         amount={item.amount}
-  //       />
-  //     );
-  //   });
-  // };
+  const setData = (tmp) => {
+    setDataExpense(tmp);
+  };
   const changeName = (e) => {
     setName(e.target.value);
   };
@@ -105,7 +94,7 @@ function ExpenseApp(props) {
           </select>
         </div> */}
         <GraphChart dataExpense={dataExpense} />
-        <ExpenseList dataExpense={dataExpense} />
+        <ExpenseList dataExpense={dataExpense} setData={setData} />
       </div>
     </div>
   );

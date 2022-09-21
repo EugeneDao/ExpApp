@@ -4,18 +4,31 @@ import "./style.css";
 import ExpenseItem from "../ExpenseItem";
 
 function ExpenseList(props) {
+  const handleDelete = (daylakhaibaohamcuaitemchonaylaitemkhibamvaobutton) => {
+    let current = props.dataExpense;
+    current = current.filter(
+      (item) =>
+        item.name !== daylakhaibaohamcuaitemchonaylaitemkhibamvaobutton.name
+    );
+    props.setData(current);
+  };
   return (
     <div className="expense-list">
       {props.dataExpense.map((item, index) => {
         return (
-          <ExpenseItem
-            key={index}
-            year={item.year}
-            month={item.month}
-            day={item.day}
-            name={item.name}
-            amount={item.amount}
-          />
+          <div className="include">
+            <ExpenseItem
+              key={index}
+              year={item.year}
+              month={item.month}
+              day={item.day}
+              name={item.name}
+              amount={item.amount}
+            />
+            <button onClick={() => handleDelete(item)}>
+              <i className="fas fa-trash"></i>
+            </button>
+          </div>
         );
       })}
     </div>

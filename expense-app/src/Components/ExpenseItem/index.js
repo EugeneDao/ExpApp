@@ -58,9 +58,9 @@ function ExpenseItem(props) {
 
       <span className="name">
         {props.name}
-        <button>
+        {/* <button onClick={handleDelete}>
           <i className="fas fa-trash"></i>
-        </button>
+        </button> */}
       </span>
 
       <span className="amount">$ {props.amount}</span>

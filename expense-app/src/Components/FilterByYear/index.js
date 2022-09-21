@@ -1,6 +1,7 @@
 import "./style.css";
 import React, { useState } from "react";
 import ExpenseItem from "../ExpenseItem";
+let thay;
 const FilterYear = (props) => {
   const [change, setChange] = useState("");
   const filterExpense = (filterYear) => {
@@ -9,6 +10,7 @@ const FilterYear = (props) => {
     });
     console.log(props.dataExpense);
     console.log(updatedExpense);
+    thay = updatedExpense;
     // props.setData(updatedExpense);
 
     updatedExpense.map((item, index) => {
@@ -28,9 +30,9 @@ const FilterYear = (props) => {
   const handleChange = (e) => {
     if (e.target.value === "All") {
     } else {
-      setChange(e.target.value);
-      console.log(change);
-      filterExpense(change);
+      //   setChange(e.target.value);
+      //   console.log(change);
+      filterExpense(e.target.value);
     }
   };
   return (

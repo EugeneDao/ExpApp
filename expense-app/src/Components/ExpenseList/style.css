@@ -13,3 +13,23 @@
 
     /* background: #1A1A1A; */
 }
+.include{
+    display: flex;
+    justify-content: space-between;
+}
+.include button{
+    background: #1A1A1A;
+    border: none;
+    font-size: 25px;
+    
+}
+.fas:hover{
+
+    color:coral;
+}
+.fas{
+    color:#575757;
+    margin-left: 10px;
+    font-size: 30px;
+    /* margin-top: 0px; */
+} 
